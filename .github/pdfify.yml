@@ -1,0 +1,20 @@
+style:
+  # (optional) path where the style CSS can be found, defaults to `null`
+  path:
+    - style.css
+
+header:
+  # (optional) path to where the hader.(hbs|html) can be found, defaults to `null`
+  path:
+    - header.hbs
+  # header height, must be set if `header/path` is set
+  height:
+    - 25
+  # (optional) repeat the header on every page, defaults to `false`: (true|false)
+  repeat:
+    - false
+
+save:
+  # optinal path to save PDFs to, defaults to `null`
+  path:
+    - pdfs/
