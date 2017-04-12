@@ -1,0 +1,23 @@
+{
+  "name": "probot-pdfify",
+  "description": "Convert markdown files into PDF on Pull Requests using PRobot",
+  "keywords": ["probot", "probot-plugin", "node", "github"],
+  "repository": "https://github.com/stoe/probot-pdfify",
+  "logo": "https://github.com/probot.png",
+  "env": {
+    "PRIVATE_KEY": {
+      "description": "the private key you downloaded when creating the GitHub Integration"
+    },
+    "INTEGRATION_ID": {
+      "description": "the ID of your GitHub Integration"
+    },
+    "WEBHOOK_SECRET": {
+      "description": "the secret configured for your GitHub Integration"
+    },
+    "LOG_LEVEL": {
+      "required": false,
+      "value": "info",
+      "description": "trace, debug, info, warn, error, or fatal; default: info"
+    }
+  }
+}

@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Convert markdown files into PDF on Pull Requests",
   "keywords": [
+    "probot",
     "probot-plugin",
-    "pdfify"
+    "node",
+    "github"
   ],
   "author": {
     "name": "GitHub Professional Services",
