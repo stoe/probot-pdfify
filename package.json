@@ -1,0 +1,56 @@
+{
+  "name": "probot-pdfify",
+  "version": "1.0.0",
+  "description": "Convert markdown files into PDF on Pull Requests",
+  "keywords": [
+    "probot-plugin",
+    "pdfify"
+  ],
+  "author": {
+    "name": "GitHub Professional Services",
+    "email": "services@github.com",
+    "url": "https://services.github.com"
+  },
+  "contributors": [
+    {
+      "name": "Stefan Stölzle",
+      "email": "stefan@github.com",
+      "url": "http://stefan.stoelzle.me"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/stoe/probot-pdfify#readme",
+  "repository": "stoe/probot-pdfify",
+  "bugs": {
+    "url": "https://github.com/stoe/probot-pdfify/issues"
+  },
+  "engines": {
+    "node": "^7.7"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "probot run",
+    "test": "xo && ava -v"
+  },
+  "dependencies": {
+    "execa": "^0.6.3",
+    "js-yaml": "^3.8.3",
+    "pdfify-node": "^2.3.0",
+    "probot": "^0.4.1"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "eslint": "^3.19.0",
+    "eslint-config-probot": "^0.1.0",
+    "localtunnel": "^1.8.2",
+    "xo": "^0.18.1"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.t.js"
+    ]
+  },
+  "xo": {
+    "space": 2
+  }
+}
