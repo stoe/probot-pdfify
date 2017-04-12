@@ -41,7 +41,10 @@
   "devDependencies": {
     "ava": "^0.19.1",
     "eslint": "^3.19.0",
-    "eslint-config-probot": "^0.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "localtunnel": "^1.8.2",
     "xo": "^0.18.1"
   },

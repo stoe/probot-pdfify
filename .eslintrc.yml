@@ -5,4 +5,21 @@ env:
   node: true
 
 plugins:
-  - probot
+  - import
+  - node
+  - promise
+  - standard
+
+rules:
+  intent:
+    - 2
+    - spaces
+  quotes:
+    - 2
+    - single
+  comma-dangle:
+    - 2
+    - never
+  operator-linebreak:
+    - 2
+    - after
