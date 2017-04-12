@@ -1,3 +1,6 @@
+.env
+*.pem
+
 # Logs
 logs
 *.log
