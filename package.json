@@ -31,7 +31,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "probot run -p 3000 ./index.js",
+    "start": "probot run ./index.js",
     "test": "xo && ava -v"
   },
   "dependencies": {
