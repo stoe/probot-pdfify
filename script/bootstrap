@@ -11,7 +11,7 @@ if [ -f .env ]; then
 fi
 
 echo "installing dependencies..."
-yarn install
+npm install
 
 echo "setting up heroku..."
 heroku config:set INTEGRATION_ID="${INTEGRATION_ID}" WEBHOOK_SECRET="${WEBHOOK_SECRET}" PRIVATE_KEY="$(cat pdfify.pem)" --app "${HEROKU_APP_NAME}"

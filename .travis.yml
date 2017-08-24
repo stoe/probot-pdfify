@@ -12,4 +12,4 @@ cache:
     - node_modules
 
 # before_script: 'snyk auth $SNYK_TOKEN'
-script: 'yarn test'
+script: 'npm test'
