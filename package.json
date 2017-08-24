@@ -33,7 +33,9 @@
   "main": "index.js",
   "scripts": {
     "start": "probot run ./index.js",
-    "test": "xo && ava -v"
+    "test": "xo && ava -v",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "execa": "^0.6.3",
@@ -49,6 +51,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "localtunnel": "^1.8.2",
+    "snyk": "^1.40.0",
     "xo": "^0.18.1"
   },
   "ava": {
@@ -58,5 +61,6 @@
   },
   "xo": {
     "space": 2
-  }
+  },
+  "snyk": true
 }
