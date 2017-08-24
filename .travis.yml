@@ -1,15 +1,35 @@
 language: node_js
 node_js:
-  - '7.7'
+  - 'node'
+  - '7'
+  - '6'
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - node_js: 'node'
 
 notifications:
   email:
     on_success: never
     on_failure: change
+  slack:
+    template:
+      - "%{repository_slug}@%{branch} (%{commit}): %{result} in %{duration}"
+      - "%{build_url}"
+    rooms:
+      secure: U1N3HSvSElBQMO1XMgvVO4r52eDHtajsGxleXbscgd2GTrKyUlJBekywoE/l+OSm2UsleYcn9ZuJHnuExGRHWDj+srptPHgWBvmKFeZr+1Z5oqu7h+/OIDi+MxaC12svXAPAwKiTjHIxdZfZRs3b5GD+t2GdNAy2ymw276O6cAonSaANSpq1RiEJAgaaQQoOx7UcP/RTFCKs4fsTWTiGPtE8Y1RBWfLQVH3Rwg0GB+KeR8/KKBUSikbSR8hlAow3C4vGAQuayJkNAwjKI1bZZEFkKQPqmGreuUhkuGCZLBPJh25lrH5OsDA/kvBaHlX/RkxVSA5mruodCFtWNTLKulzT4VyzXUH5+L3I+w6iXUpTE2878gIsP7rizRLeypREY/z69Qn9QiKYnSLCfPo2Ve8KB8bWsEOLXX8bXq6nRP3C7in0LXF2Qrxs/4Na1yVQM4eWzm8fK6sKDbpG0LTUADtBQr9Bq8Y7+aIczHkcsXr6Jg7iBiJoUfpwOSrvg4taD28/5Sdh+G9RXWQon8zzLBfj4PtAuLdfzmwYGaZe8KSTHy/c8f2QzKg3sf5cTzBEyTSA/TATFfyPsSDtI5YvEvSOuH3zT8r6grMKtt//CqumqJKvZQavOVOA7uHOpm+4/LBZd0q3ZVFs5B+SW+8R9fI8duRea7Y8s8zQvn69rmw=
+    on_success: change
+    on_failure: always
+
+env:
+  global:
+    secure: z9zEd/BMfc8IXQkqX4ceCXxwtCn/LcqvuS+JLt6EKn1PvQ5R8ic///gCanCuFlZHMIQE6gWj7D2p9xp4GIeWMLPuHHVBtqxmP+n+POAkEX/q3dT4WHlp2nJ5LybY5/0+JqbZAZ/6juWjl6FrYuaueX7rtr2BgpIVfWMs0O6TDnZhc+vZdeOq8bzgHSfIvSjmT1oIC+NoXbaaLcI/rS1erQ5UobqFkx8EB21wMfPrOh+D6F6zBtnYU8hACzCEmv3nAXCj3Z+9+5AFHDLY4icB2tRX/z34l4TVUmbxxI04n0fsyN1pf1yUrhwOForRA4YCRjVRUWLnXhmF7sQewDJdaSVDcjpZnsCyBAUNPy5GIfXHeuIfZiUX+oKUk5iY0hyUMh8DFcwHkbaoxFCbbA5PdVxxomQPBLhFIrg0+gPaaUo9Ta23uBxZeiJ2kbSJAzzzbz7atvC5fj+LDB/D1GtZxJxiT1wR2BOHxSiX8NSdLW+Aj8dNISvG2TnBkBHTxZno5NzJD6qXyNsJwo/Gnesp9JMTU5sywsJaKSyGhRf9lzy9k4VNkzAgzWqlectIlRbYwdpdvmgQxkfYds8vNjR+OEV1v/crqj0wtw+ruRjtWNk4S29Bs5L2EFmYNE+Vw0wV8l00Icmluxt0WTBpx1g0SCjeqs0VyL2Zac29zsqgEXc=
 
 cache:
   directories:
     - node_modules
 
-# before_script: 'snyk auth $SNYK_TOKEN'
+install: 'npm install'
+before_script: 'snyk auth $SNYK_TOKEN'
 script: 'npm test'
