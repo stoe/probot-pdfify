@@ -33,9 +33,7 @@
   "main": "index.js",
   "scripts": {
     "start": "probot run ./index.js",
-    "test": "xo && ava -v",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "test": "xo && ava -v"
   },
   "dependencies": {
     "execa": "^0.6.3",
